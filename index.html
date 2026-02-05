@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <title>عيد حب سعيد يا مريم ❤️</title>
   <style>
+    /* الخطوط والخلفية */
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #ff758c, #ff7eb3);
-      color: white;
       text-align: center;
       padding: 50px;
       overflow-x: hidden;
+      background: linear-gradient(-45deg, #ff758c, #ff7eb3, #ff9ec3, #ffc0cb);
+      background-size: 400% 400%;
+      animation: bgMove 20s ease infinite;
+      color: white;
     }
 
+    /* الفيديو */
     iframe {
       width: 90%;
       height: 300px;
@@ -24,17 +28,27 @@
       animation: fadeIn 2s forwards 0.5s;
     }
 
+    /* الصور */
     img {
-      width: 220px; /* حجم الصور ثابت وجميل */
+      width: 90%;
+      max-width: 220px;
       border-radius: 20px;
       margin: 15px;
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
       display: inline-block;
-      opacity: 1; /* الصور ثابتة من أول ما الصفحة تفتح */
+      opacity: 1; /* ثابتة */
       transform: none;
       animation: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    /* تأثير Hover على الصور */
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255,255,255,0.6);
+    }
+
+    /* الصندوق الرئيسي */
     .box {
       background: rgba(0,0,0,0.3);
       padding: 50px;
@@ -44,6 +58,7 @@
       overflow: visible;
     }
 
+    /* العنوان */
     h1 {
       font-size: 3em;
       margin-bottom: 20px;
@@ -52,8 +67,9 @@
       animation: fadeIn 1s forwards;
     }
 
+    /* الفقرات */
     p {
-      font-size: 1.2em;
+      font-size: calc(14px + 0.5vw);
       line-height: 1.8em;
       margin: 20px 0;
       opacity: 0;
@@ -61,6 +77,7 @@
       animation: slideIn 1s forwards;
     }
 
+    /* العنوان الصغير */
     h3 {
       margin-top: 30px;
       font-size: 1.6em;
@@ -84,6 +101,12 @@
         transform: translateX(0);
       }
     }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
   </style>
 </head>
 <body>
@@ -100,9 +123,9 @@
       كل لحظة معاكي بتحسسني براحتي وفرحي… أحيانًا بحس إن الدنيا محتاجانيش غير لما تبصيلي وتشوفي قلبي بيقول لك بحبك 😍
     </p>
 
-    <!-- الصور ثابتة -->
-    <img src="a60070df4e1847bca5aeab9548300fcc.jpg" alt="صورة مريم">
-    <img src="a60070df4e1847bca5aeab9548300fcc.jpg" alt="صورة مريم">
+    <!-- الصور -->
+    <img src="mariam1.jpg" alt="صورة مريم">
+    <img src="mariam2.jpg" alt="صورة مريم">
 
     <p>
       من يوم 27/6/2024 وإحنا مع بعض، وكل لحظة فيها مليانة حب وفرح.  
@@ -143,5 +166,3 @@
 
 </body>
 </html>
-      
-    
