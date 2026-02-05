@@ -12,16 +12,16 @@
       color: white;
       background-color: #ff758c;
 
-      /* الخلفية المتحركة */
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><text x='0' y='50' font-size='25' fill='rgba(255,255,255,0.1)'>أحمد♥💍مريم</text></svg>");
+      /* الخلفية مع عبارة واضحة "أحمد♥💍مريم" */
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='100'><text x='0' y='70' font-size='40' fill='rgba(255,255,255,0.3)' font-weight='bold'>أحمد♥💍مريم</text></svg>");
       background-repeat: repeat;
-      background-size: 200px 200px;
+      background-size: 300px 100px;
       animation: moveBackground 30s linear infinite;
     }
 
     @keyframes moveBackground {
       0% { background-position: 0 0; }
-      100% { background-position: 400px 400px; }
+      100% { background-position: 600px 200px; }
     }
 
     iframe {
@@ -92,7 +92,6 @@
     @keyframes slideIn {
       to { opacity: 1; transform: translateX(0); }
     }
-
   </style>
 </head>
 <body>
