@@ -10,21 +10,20 @@
       padding: 50px;
       overflow-x: hidden;
       color: white;
+      background-color: #ff758c;
 
-      /* الخلفية على شكل كلمة مريم */
-      background: repeating-linear-gradient(
-        45deg,
-        rgba(255, 192, 203, 0.1),
-        rgba(255, 192, 203, 0.1) 40px,
-        transparent 40px,
-        transparent 80px
-      ),
-      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><text x="0" y="50" font-size="40" fill="rgba(255,255,255,0.05)">مريم</text></svg>');
-
-      background-size: cover;
+      /* الخلفية المتحركة */
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><text x='0' y='50' font-size='25' fill='rgba(255,255,255,0.1)'>أحمد♥💍مريم</text></svg>");
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      animation: moveBackground 30s linear infinite;
     }
 
-    /* الفيديو */
+    @keyframes moveBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: 400px 400px; }
+    }
+
     iframe {
       width: 90%;
       height: 300px;
@@ -36,7 +35,6 @@
       animation: fadeIn 2s forwards 0.5s;
     }
 
-    /* الصور */
     img {
       width: 90%;
       max-width: 220px;
@@ -44,9 +42,6 @@
       margin: 15px;
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
       display: inline-block;
-      opacity: 1;
-      transform: none;
-      animation: none;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -97,6 +92,7 @@
     @keyframes slideIn {
       to { opacity: 1; transform: translateX(0); }
     }
+
   </style>
 </head>
 <body>
