@@ -12,11 +12,11 @@
       color: white;
       background-color: #ff758c;
 
-      /* الخلفية مع عبارة واضحة "أحمد♥💍مريم" */
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='100'><text x='0' y='70' font-size='40' fill='rgba(255,255,255,0.3)' font-weight='bold'>أحمد♥💍مريم</text></svg>");
+      /* الخلفية المتحركة النهائية */
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='100'><text x='0' y='70' font-size='45' fill='rgba(255,255,255,0.35)' font-weight='bold'>أحمد♥💍مريم</text></svg>");
       background-repeat: repeat;
       background-size: 300px 100px;
-      animation: moveBackground 30s linear infinite;
+      animation: moveBackground 40s linear infinite;
     }
 
     @keyframes moveBackground {
@@ -42,12 +42,12 @@
       margin: 15px;
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
       display: inline-block;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
 
     img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(255,255,255,0.6);
+      transform: scale(1.1) rotate(-1deg);
+      box-shadow: 0 0 40px rgba(255,255,255,0.7);
     }
 
     .box {
@@ -85,6 +85,13 @@
       animation: fadeIn 1s forwards 2s;
     }
 
+    /* إضافات الحركة النهائية للنصوص */
+    p:nth-of-type(1) { animation-delay: 1s; }
+    p:nth-of-type(2) { animation-delay: 1.5s; }
+    p:nth-of-type(3) { animation-delay: 2s; }
+    p:nth-of-type(4) { animation-delay: 2.5s; }
+    p:nth-of-type(5) { animation-delay: 3s; }
+
     @keyframes fadeIn {
       to { opacity: 1; transform: translateY(0); }
     }
@@ -92,6 +99,7 @@
     @keyframes slideIn {
       to { opacity: 1; transform: translateX(0); }
     }
+
   </style>
 </head>
 <body>
