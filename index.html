@@ -25,26 +25,27 @@
     }
 
     img {
-      width: 200px;
+      width: 220px; /* حجم الصور ثابت وجميل */
       border-radius: 20px;
       margin: 15px;
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      opacity: 0;
-      transform: scale(0.8);
-      animation: popIn 1s forwards;
+      display: inline-block;
+      opacity: 1; /* الصور ثابتة من أول ما الصفحة تفتح */
+      transform: none;
+      animation: none;
     }
 
     .box {
       background: rgba(0,0,0,0.3);
       padding: 50px;
       border-radius: 25px;
-      max-width: 700px;
+      max-width: 750px;
       margin: auto;
       overflow: visible;
     }
 
     h1 {
-      font-size: 2.8em;
+      font-size: 3em;
       margin-bottom: 20px;
       opacity: 0;
       transform: translateY(-30px);
@@ -83,20 +84,6 @@
         transform: translateX(0);
       }
     }
-
-    @keyframes popIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.5);
-      }
-      60% {
-        opacity: 1;
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
   </style>
 </head>
 <body>
@@ -113,8 +100,9 @@
       كل لحظة معاكي بتحسسني براحتي وفرحي… أحيانًا بحس إن الدنيا محتاجانيش غير لما تبصيلي وتشوفي قلبي بيقول لك بحبك 😍
     </p>
 
-    <img src="a60070df4e1847bca5aeab9548300fcc.jpg" alt="صورة مريم">
-    <img src="a60070df4e1847bca5aeab9548300fcc.jpg" alt="صورة مريم">
+    <!-- الصور ثابتة -->
+    <img src="https://github.com/اسم_المستخدم/المستودع/raw/main/a60070df4e1847bca5aeab9548300fcc.jpg" alt="صورة مريم">
+    <img src="https://github.com/اسم_المستخدم/المستودع/raw/main/a60070df4e1847bca5aeab9548300fcc.jpg" alt="صورة مريم">
 
     <p>
       من يوم 27/6/2024 وإحنا مع بعض، وكل لحظة فيها مليانة حب وفرح.  
@@ -155,4 +143,5 @@
 
 </body>
 </html>
-
+      
+    
