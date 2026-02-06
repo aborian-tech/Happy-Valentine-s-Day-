@@ -10,18 +10,20 @@
       padding: 50px;
       overflow-x: hidden;
       color: white;
-      background-color: #ff758c;
 
-      /* الخلفية المتحركة */
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='100'><text x='0' y='70' font-size='45' fill='rgba(255,255,255,0.35)' font-weight='bold'>أحمد♥💍مريم</text></svg>");
-      background-repeat: repeat;
-      background-size: 300px 100px;
+      /* الخلفية مع الصورة والكلمة */
+      background-image: 
+        url('a60070df4e1847bca5aeab9548300fcc.jpg'),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='100'><text x='0' y='70' font-size='45' fill='rgba(255,255,255,0.35)' font-weight='bold'>أحمد♥💍مريم</text></svg>");
+      background-repeat: no-repeat, repeat;
+      background-size: cover, 300px 100px;
+      background-position: center, 0 0;
       animation: moveBackground 40s linear infinite, fadeBackground 10s ease-in-out infinite alternate;
     }
 
     @keyframes moveBackground {
-      0% { background-position: 0 0; }
-      100% { background-position: 600px 200px; }
+      0% { background-position: center, 0 0; }
+      100% { background-position: center, 600px 200px; }
     }
 
     @keyframes fadeBackground {
