@@ -12,16 +12,21 @@
       color: white;
       background-color: #ff758c;
 
-      /* الخلفية المتحركة النهائية */
+      /* الخلفية المتحركة */
       background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='100'><text x='0' y='70' font-size='45' fill='rgba(255,255,255,0.35)' font-weight='bold'>أحمد♥💍مريم</text></svg>");
       background-repeat: repeat;
       background-size: 300px 100px;
-      animation: moveBackground 40s linear infinite;
+      animation: moveBackground 40s linear infinite, fadeBackground 10s ease-in-out infinite alternate;
     }
 
     @keyframes moveBackground {
       0% { background-position: 0 0; }
       100% { background-position: 600px 200px; }
+    }
+
+    @keyframes fadeBackground {
+      0% { opacity: 0.7; }
+      100% { opacity: 1; }
     }
 
     iframe {
@@ -33,6 +38,20 @@
       opacity: 0;
       transform: translateY(-20px);
       animation: fadeIn 2s forwards 0.5s;
+    }
+
+    .bubble {
+      position: fixed;
+      bottom: -50px;
+      font-size: 20px;
+      color: rgba(255,255,255,0.7);
+      animation: floatUp linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-1200px) scale(1.5); opacity: 0; }
     }
 
     img {
@@ -67,39 +86,34 @@
       animation: fadeIn 1s forwards;
     }
 
-    p {
+    p, h3 {
       font-size: calc(14px + 0.5vw);
       line-height: 1.8em;
       margin: 20px 0;
+      display: inline-block;
       opacity: 0;
-      transform: translateX(-30px);
-      animation: slideIn 1s forwards;
     }
 
-    h3 {
-      margin-top: 30px;
-      font-size: 1.6em;
-      color: #ffe5ec;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeIn 1s forwards 2s;
+    /* Typing effect */
+    .typing {
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(50, end) forwards, blink 0.7s step-end infinite alternate;
     }
 
-    /* إضافات الحركة النهائية للنصوص */
-    p:nth-of-type(1) { animation-delay: 1s; }
-    p:nth-of-type(2) { animation-delay: 1.5s; }
-    p:nth-of-type(3) { animation-delay: 2s; }
-    p:nth-of-type(4) { animation-delay: 2.5s; }
-    p:nth-of-type(5) { animation-delay: 3s; }
+    @keyframes typing {
+      from { width: 0; opacity: 1; }
+      to { width: 100%; opacity: 1; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
 
     @keyframes fadeIn {
       to { opacity: 1; transform: translateY(0); }
     }
-
-    @keyframes slideIn {
-      to { opacity: 1; transform: translateX(0); }
-    }
-
   </style>
 </head>
 <body>
@@ -108,7 +122,7 @@
 
     <iframe src="https://www.youtube.com/embed/vv_bhRA-NHE?autoplay=1&loop=1&playlist=vv_bhRA-NHE" allow="autoplay; encrypted-media"></iframe>
 
-    <p>
+    <p class="typing">
       مريم، كل يوم بيعدي بحس قد إيه أنا محظوظ بوجودك جنبي.  
       انتي مش مجرد حبيبة، انتي كل الأمان والسعادة اللي كنت بدور عليها طول حياتي.  
       كل لحظة معاكي بتحسسني براحتي وفرحي… أحيانًا بحس إن الدنيا محتاجانيش غير لما تبصيلي وتشوفي قلبي بيقول لك بحبك 😍
@@ -117,7 +131,7 @@
     <img src="a60070df4e1847bca5aeab9548300fcc.jpg" alt="صورة مريم">
     <img src="a60070df4e1847bca5aeab9548300fcc.jpg" alt="صورة مريم">
 
-    <p>
+    <p class="typing" style="animation-delay: 4s;">
       من يوم 27/6/2024 وإحنا مع بعض، وكل لحظة فيها مليانة حب وفرح.  
       بحب كل حاجة فيكي… من ضحكتك اللي بنسى بيها الدنيا،  
       لعيونك اللي أول ما بشوفها قلبي بيطمن…  
@@ -125,33 +139,44 @@
       بوعدك هفضل أحبك لحد آخر نفس ❤️💌
     </p>
 
-    <p>
+    <p class="typing" style="animation-delay: 8s;">
       مريم… مش عارف أبدأ منين، بس كل اللي متأكد منه إن وجودك في حياتي هو أجمل حاجة حصلتلي.  
       إنتي مش شخص عادي في حياتي، إنتي الأمان اللي قلبي كان مستنيه، والفرحة اللي بتيجي من غير سبب، والراحة اللي بحسها أول ما اسمك ييجي على بالي.
     </p>
 
-    <p>
+    <p class="typing" style="animation-delay: 12s;">
       كل يوم بصحى وأنا ممتن إن ربنا جمعني بيكي، ممتن لكل ضحكة، لكل كلمة، لكل لحظة بسيطة بينا.  
       بحبك مش عشان حاجة معينة، بحبك عشان انتي مريم… بروحك، بقلبك، بعفويتك، بحاجاتك الصغيرة اللي يمكن غيري ميلاحظهاش بس أنا حافظها واحدة واحدة.
     </p>
 
-    <p>
-      يمكن الدنيا تبقى صعبة أحيانًا، ويمكن نتعب أو نزعل، بس عمري ما شكّيت لحظة إنك الاختيار الصح.  
-      وجودك جنبي بيهون أي حاجة، وكلامك بيطمني، وبصتك بتخليني أحس إن كل حاجة هتبقى تمام.
-    </p>
-
-    <p>
+    <p class="typing" style="animation-delay: 16s;">
       أنا بحبك حب مش مرتبط بيوم ولا مناسبة، بحبك كل يوم وكل لحظة، في ضحكتك وفي زعلك، في قوتك وفي ضعفك، في كل نسخة منك.  
       وبوعدك إن قلبي يفضل بيتك، وإن أفضل دايمًا أختارك، مهما حصل ومهما الزمن لف بينا.
     </p>
 
-    <p>
+    <p class="typing" style="animation-delay: 20s;">
       انتي مش بس حبيبتي… انتي دعوة حلوة اتحققت،  
       ونعمة بحمد ربنا عليها كل يوم،  
       وحلم ناوي أكمّل بيه عمري كله ❤️
     </p>
 
-    <h3>بحبك النهارده وبكره وطول العمر 💍</h3>
+    <h3 class="typing" style="animation-delay: 24s;">بحبك النهارده وبكره وطول العمر 💍</h3>
   </div>
+
+  <!-- فقاعات الحب -->
+  <script>
+    const colors = ['❤️','💖','💘','💍','💌'];
+    function createBubble() {
+      const bubble = document.createElement('div');
+      bubble.classList.add('bubble');
+      bubble.style.left = Math.random() * 100 + 'vw';
+      bubble.style.fontSize = 20 + Math.random() * 20 + 'px';
+      bubble.innerText = colors[Math.floor(Math.random()*colors.length)];
+      bubble.style.animationDuration = 5 + Math.random()*5 + 's';
+      document.body.appendChild(bubble);
+      setTimeout(() => bubble.remove(), 10000);
+    }
+    setInterval(createBubble, 500);
+  </script>
 </body>
 </html>
