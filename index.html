@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>إلى حبيبتي ورفيقة عمري مريومتي&#128141; &#10084;&#65039;</title>
+<title>إلى حبيبتي ورفيقة عمري مريومتي</title>
 
 <style>
 body {
@@ -20,20 +20,12 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: 
-    url('a60070df4e1847bca5aeab9548300fcc.jpg'),
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='100'><text x='0' y='70' font-size='45' fill='rgba(255,255,255,0.25)' font-weight='bold'>أحمد♥💍مريم</text></svg>");
-  background-repeat: no-repeat, repeat;
-  background-size: cover, 300px 100px;
-  background-position: center, 0 0;
-  animation: moveBackground 80s linear infinite;
+  background-image: url('a60070df4e1847bca5aeab9548300fcc.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   filter: brightness(0.8);
   z-index: -1;
-}
-
-@keyframes moveBackground {
-  0% { background-position: center, 0 0; }
-  100% { background-position: center, 300px 50px; }
 }
 
 .box {
@@ -162,7 +154,6 @@ p, h3 {
     وحلم ناوي أكمّل بيه عمري كله ❤️
   </p>
 
-  <!-- النص الرومانسي الجديد المضاف -->
   <p>
     مريم… كل يوم بتمرّ عليّا بحس قد إيه حياتي اتغيّرت بعد ما اتعرفت عليكي.  
     انتي مش بس حبيبتي… انتي أمان قلبي وفرحة عيوني وسندي وقت كل ضيق.  
@@ -221,10 +212,10 @@ function createBubble() {
   bubble.innerText = colors[Math.floor(Math.random()*colors.length)];
   bubble.style.animationDuration = 5 + Math.random()*10 + 's';
   document.body.appendChild(bubble);
-  setTimeout(() => bubble.remove(), 8000);
+  setTimeout(() => bubble.remove(), 7000);
 }
 
-setInterval(createBubble, 1500);
+setInterval(createBubble, 2000);
 </script>
 
 </body>
