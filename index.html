@@ -1,181 +1,168 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>عيد حب سعيد يا مريم ❤️</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      padding: 50px;
-      overflow-x: hidden;
-      color: white;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عيد حب سعيد يا مريم ❤️</title>
 
-      /* الخلفية مع الصورة والكلمة */
-      background-image: 
-        url('a60070df4e1847bca5aeab9548300fcc.jpg'),
-        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='100'><text x='0' y='70' font-size='45' fill='rgba(255,255,255,0.35)' font-weight='bold'>أحمد♥💍مريم</text></svg>");
-      background-repeat: no-repeat, repeat;
-      background-size: cover, 300px 100px;
-      background-position: center, 0 0;
-      animation: moveBackground 40s linear infinite, fadeBackground 10s ease-in-out infinite alternate;
-    }
+<style>
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 50px;
+  overflow-x: hidden;
+  color: white;
+  margin: 0;
+  background: black;
+}
 
-    @keyframes moveBackground {
-      0% { background-position: center, 0 0; }
-      100% { background-position: center, 600px 200px; }
-    }
+/* خلفية احترافية */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: 
+    url('a60070df4e1847bca5aeab9548300fcc.jpg'),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='100'><text x='0' y='70' font-size='45' fill='rgba(255,255,255,0.25)' font-weight='bold'>أحمد♥💍مريم</text></svg>");
+  background-repeat: no-repeat, repeat;
+  background-size: cover, 300px 100px;
+  background-position: center, 0 0;
+  animation: moveBackground 40s linear infinite;
+  filter: blur(3px) brightness(0.8);
+  z-index: -1;
+}
 
-    @keyframes fadeBackground {
-      0% { opacity: 0.7; }
-      100% { opacity: 1; }
-    }
+@keyframes moveBackground {
+  0% { background-position: center, 0 0; }
+  100% { background-position: center, 600px 200px; }
+}
 
-    iframe {
-      width: 90%;
-      height: 300px;
-      border: none;
-      border-radius: 15px;
-      margin: 20px 0;
-      opacity: 0;
-      transform: translateY(-20px);
-      animation: fadeIn 2s forwards 0.5s;
-    }
+.box {
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(15px);
+  padding: 50px;
+  border-radius: 25px;
+  max-width: 750px;
+  margin: auto;
+}
 
-    .bubble {
-      position: fixed;
-      bottom: -50px;
-      font-size: 20px;
-      color: rgba(255,255,255,0.7);
-      animation: floatUp linear infinite;
-      pointer-events: none;
-    }
+h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
 
-    @keyframes floatUp {
-      0% { transform: translateY(0) scale(1); opacity: 1; }
-      100% { transform: translateY(-1200px) scale(1.5); opacity: 0; }
-    }
+#counter {
+  font-size: 1.4em;
+  margin-bottom: 30px;
+  color: #ffccd5;
+  font-weight: bold;
+}
 
-    img {
-      width: 90%;
-      max-width: 220px;
-      border-radius: 20px;
-      margin: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      display: inline-block;
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
-    }
+iframe {
+  width: 90%;
+  height: 300px;
+  border: none;
+  border-radius: 15px;
+  margin: 20px 0;
+}
 
-    img:hover {
-      transform: scale(1.1) rotate(-1deg);
-      box-shadow: 0 0 40px rgba(255,255,255,0.7);
-    }
+img {
+  width: 90%;
+  max-width: 220px;
+  border-radius: 20px;
+  margin: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
 
-    .box {
-      background: rgba(0,0,0,0.3);
-      padding: 50px;
-      border-radius: 25px;
-      max-width: 750px;
-      margin: auto;
-      overflow: visible;
-    }
+img:hover {
+  transform: scale(1.1) rotate(-1deg);
+  box-shadow: 0 0 40px rgba(255,255,255,0.7);
+}
 
-    h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-      opacity: 0;
-      transform: translateY(-30px);
-      animation: fadeIn 1s forwards;
-    }
+p, h3 {
+  font-size: calc(14px + 0.5vw);
+  line-height: 1.8em;
+  margin: 20px 0;
+}
 
-    p, h3 {
-      font-size: calc(14px + 0.5vw);
-      line-height: 1.8em;
-      margin: 20px 0;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s forwards;
-    }
+/* فقاعات الحب */
+.bubble {
+  position: fixed;
+  bottom: -50px;
+  font-size: 20px;
+  animation: floatUp linear infinite;
+  pointer-events: none;
+}
 
-    p:nth-of-type(1) { animation-delay: 1s; }
-    p:nth-of-type(2) { animation-delay: 2s; }
-    p:nth-of-type(3) { animation-delay: 3s; }
-    p:nth-of-type(4) { animation-delay: 4s; }
-    p:nth-of-type(5) { animation-delay: 5s; }
-    p:nth-of-type(6) { animation-delay: 6s; }
-    h3 { animation-delay: 7s; }
-
-    @keyframes fadeIn {
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-1200px) scale(1.5); opacity: 0; }
+}
+</style>
 </head>
+
 <body>
-  <div class="box">
-    <h1>عيد حب سعيد يا مريم ❤️</h1>
 
-    <iframe src="https://www.youtube.com/embed/vv_bhRA-NHE?autoplay=1&loop=1&playlist=vv_bhRA-NHE" allow="autoplay; encrypted-media"></iframe>
+<div class="box">
+  <h1>عيد حب سعيد يا مريم ❤️</h1>
 
-    <p>
-      مريم، كل يوم بيعدي بحس قد إيه أنا محظوظ بوجودك جنبي.  
-      انتي مش مجرد حبيبة، انتي كل الأمان والسعادة اللي كنت بدور عليها طول حياتي.  
-      كل لحظة معاكي بتحسسني براحتي وفرحي… أحيانًا بحس إن الدنيا محتاجانيش غير لما تبصيلي وتشوفي قلبي بيقول لك بحبك 😍
-    </p>
+  <div id="counter"></div>
 
-    <img src="a60070df4e1847bca5aeab9548300fcc.jpg" alt="صورة مريم">
-    <img src="a60070df4e1847bca5aeab9548300fcc.jpg" alt="صورة مريم">
+  <iframe src="https://www.youtube.com/embed/vv_bhRA-NHE?autoplay=1&loop=1&playlist=vv_bhRA-NHE" allow="autoplay"></iframe>
 
-    <p>
-      من يوم 27/6/2024 وإحنا مع بعض، وكل لحظة فيها مليانة حب وفرح.  
-      بحب كل حاجة فيكي… من ضحكتك اللي بنسى بيها الدنيا،  
-      لعيونك اللي أول ما بشوفها قلبي بيطمن…  
-      انتي مش بس حبيبتي، انتي نصفي التاني…  
-      بوعدك هفضل أحبك لحد آخر نفس ❤️💌
-    </p>
+  <p>
+    من يوم 27/6/2024 وإحنا مع بعض، وكل لحظة فيها مليانة حب وفرح ❤️
+  </p>
 
-    <p>
-      مريم… مش عارف أبدأ منين، بس كل اللي متأكد منه إن وجودك في حياتي هو أجمل حاجة حصلتلي.  
-      إنتي مش شخص عادي في حياتي، إنتي الأمان اللي قلبي كان مستنيه، والفرحة اللي بتيجي من غير سبب، والراحة اللي بحسها أول ما اسمك ييجي على بالي.
-    </p>
+  <img src="a60070df4e1847bca5aeab9548300fcc.jpg" alt="صورة مريم">
+  <img src="a60070df4e1847bca5aeab9548300fcc.jpg" alt="صورة مريم">
 
-    <p>
-      كل يوم بصحى وأنا ممتن إن ربنا جمعني بيكي، ممتن لكل ضحكة، لكل كلمة، لكل لحظة بسيطة بينا.  
-      بحبك مش عشان حاجة معينة، بحبك عشان انتي مريم… بروحك، بقلبك، بعفويتك، بحاجاتك الصغيرة اللي يمكن غيري ميلاحظهاش بس أنا حافظها واحدة واحدة.
-    </p>
+  <p>
+    انتي مش بس حبيبتي… انتي دعوة حلوة اتحققت،  
+    ونعمة بحمد ربنا عليها كل يوم،  
+    وحلم ناوي أكمّل بيه عمري كله ❤️
+  </p>
 
-    <p>
-      يمكن الدنيا تبقى صعبة أحيانًا، ويمكن نتعب أو نزعل، بس عمري ما شكّيت لحظة إنك الاختيار الصح.  
-      وجودك جنبي بيهون أي حاجة، وكلامك بيطمني، وبصتك بتخليني أحس إن كل حاجة هتبقى تمام.
-    </p>
+  <h3>بحبك النهارده وبكره وطول العمر 💍</h3>
+</div>
 
-    <p>
-      أنا بحبك حب مش مرتبط بيوم ولا مناسبة، بحبك كل يوم وكل لحظة، في ضحكتك وفي زعلك، في قوتك وفي ضعفك، في كل نسخة منك.  
-      وبوعدك إن قلبي يفضل بيتك، وإن أفضل دايمًا أختارك، مهما حصل ومهما الزمن لف بينا.
-    </p>
+<script>
+// العداد
+const startDate = new Date("2024-06-27T00:00:00");
 
-    <p>
-      انتي مش بس حبيبتي… انتي دعوة حلوة اتحققت،  
-      ونعمة بحمد ربنا عليها كل يوم،  
-      وحلم ناوي أكمّل بيه عمري كله ❤️
-    </p>
+function updateCounter() {
+  const now = new Date();
+  const diff = now - startDate;
 
-    <h3>بحبك النهارده وبكره وطول العمر 💍</h3>
-  </div>
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
 
-  <!-- فقاعات الحب -->
-  <script>
-    const colors = ['❤️','💖','💘','💍','💌'];
-    function createBubble() {
-      const bubble = document.createElement('div');
-      bubble.classList.add('bubble');
-      bubble.style.left = Math.random() * 100 + 'vw';
-      bubble.style.fontSize = 20 + Math.random() * 20 + 'px';
-      bubble.innerText = colors[Math.floor(Math.random()*colors.length)];
-      bubble.style.animationDuration = 5 + Math.random()*5 + 's';
-      document.body.appendChild(bubble);
-      setTimeout(() => bubble.remove(), 10000);
-    }
-    setInterval(createBubble, 500);
-  </script>
+  document.getElementById("counter").innerHTML =
+    `بقالي معاكي ❤️ ${days} يوم و ${hours} ساعة و ${minutes} دقيقة و ${seconds} ثانية`;
+}
+
+setInterval(updateCounter, 1000);
+updateCounter();
+
+// فقاعات الحب
+const colors = ['❤️','💖','💘','💍','💌'];
+
+function createBubble() {
+  const bubble = document.createElement('div');
+  bubble.classList.add('bubble');
+  bubble.style.left = Math.random() * 100 + 'vw';
+  bubble.style.fontSize = 20 + Math.random() * 20 + 'px';
+  bubble.innerText = colors[Math.floor(Math.random()*colors.length)];
+  bubble.style.animationDuration = 5 + Math.random()*5 + 's';
+  document.body.appendChild(bubble);
+  setTimeout(() => bubble.remove(), 10000);
+}
+
+setInterval(createBubble, 500);
+</script>
+
 </body>
 </html>
